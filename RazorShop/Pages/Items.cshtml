@@ -1,0 +1,43 @@
+﻿@page
+@model RazorShop.Pages.ItemsModel
+@{
+}
+
+
+<div class="text-center">
+    <div class="mainText">
+        <h1 class="display-4 text-capitalize text-black">Choose your defence!</h1>
+        <h4>Choose and make an order </h4>
+        <h4>Don't worry'</h4>
+        <h4>We know you need it</h4>
+        <p class="smallText"><i>Choose carefuly!</i></p>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 mb-5 mt-5">
+                <div class="w-100 row makeYourOunDiv">
+                    <div class="col4">
+                        <img src="~/images/images/Create.jpg" class="w-100" />
+                    </div>
+                    <div class="col-8 align-items-center">
+                        <div class="align-middle makeYourOwnText">
+                            <h3 style="text-align:left">Create your sample</h3>
+                            <p style="text-align:left;">Make your equipment whith our system</p>
+                            <a class="btn btn-primary" style="float:left"asp-area="" asp-page="Forms/Orders">Try make yourself</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @foreach(var item in Model.fakeItemsDB)
+            {
+                var imagePath = "~/images/images/" + (item.ImageTitle + ".jpg");
+                <div class="col-4 mb-5">
+
+                    <a class="item-img" asp-area="" asp-page="Checkout/Checkout" asp-route-ImageTitle="@item.ImageTitle" asp-route-OrderPrice="@item.FinalPrice"> <img src="@imagePath" class="w-100" asp-append-version="true" /></a>
+                <br/>
+                </div>
+            }
+           
+        </div> 
+    </div>
+</div>

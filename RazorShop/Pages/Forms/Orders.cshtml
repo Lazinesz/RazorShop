@@ -1,0 +1,34 @@
+﻿@page
+@model RazorShop.Pages.Forms.OrdersModel
+@{
+}
+
+<a class="nav-link text-dark" asp-area="" asp-page="Checkout/Checkout">Checkout</a>
+
+<div class="text-center container">
+    <h1>Create Your Order</h1>
+    <form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 pb-5 rounded-5 alert-light col-4">
+        <input type="text" asp-for="Items.ItemName" placeholder="Give adantity to order" />
+        <br/>
+        <input type="checkbox" asp-for="Items.RepairKit" placeholder="Repare Kit" />Repair kit
+        <br/>
+        <input type="checkbox" asp-for="Items.MedGloves" placeholder="Medicine Gloves" />Medicine Gloves
+        <br/>
+        <input type="checkbox" asp-for="Items.Googles" placeholder="Googles" />Googles
+        <br/>
+        <input type="checkbox" asp-for="Items.Googles2" placeholder="Coolles Googles" />Cooller Googles
+        <br/>
+        <input type="checkbox" asp-for="Items.Gasmask" placeholder="Gasmask" />Gasmask
+        <br/>
+        <input type="checkbox" asp-for="Items.Gloves" placeholder="Worker Gloves" />Worker Gloves
+        <br/>
+        <input type="checkbox" asp-for="Items.AditionalDetails" placeholder="Details" />Ditales
+        <br/>
+        <input type="checkbox" asp-for="Items.Resperator" placeholder="Resperator" />resperator
+        <br/>
+        <input type="checkbox" asp-for="Items.Resperator2" placeholder="Profecional resperator" />Profecional resperator
+        <br/>
+        <button class="btn btn-primary mt-1" type="submit">Order my equip</button>
+        
+    </form>
+</div>

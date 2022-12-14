@@ -1,0 +1,42 @@
+﻿@page
+@model RazorShop.Pages.OrdersModel
+@{
+}
+
+
+<h3>Orders</h3>
+
+<hr/>
+
+<table class="table">
+    <thread>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Order Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thread>
+    <tbody>
+        @foreach(var order in Model.ItemOrders)
+        {
+     <tr>
+         <td>
+             @order.Id
+         </td>
+         <td>
+             @order.ItemName
+         </td>
+         <td>
+             @order.BasePrise
+         </td>
+     </tr>
+        }
+       
+    </tbody>
+</table>
