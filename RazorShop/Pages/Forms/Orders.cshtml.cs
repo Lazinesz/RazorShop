@@ -13,36 +13,31 @@ namespace RazorShop.Pages.Forms
         public ItemModel Items { get; set; }
         public float OrderPrice { get; set; }
         public void OnGet()
-        {
-            
+        {           
         }
-        public IActionResult OnPost()
+        public float Orde(ItemModel item)
         {
-            OrderPrice = Items.BasePrice;
+			float price = item.BasePrice;
+			
+            if (item.RepairKit) price += 1;
+            if (item.AditionalDetails) price += 1;
+            if (item.Googles) price += 1;
+            if (item.Googles2) price += 2;
+            if (item.MedGloves) price += 1;
+            if (item.Gloves) price += 1;
+            if (item.Helmet) price += 4;
+            if (item.Gasmask) price += 4;
+            if (item.ProtectCostume) price += 5;
+            if (item.Resperator) price += 1;
+            if (item.Resperator2) price += 2;
+            return price;
 
-            if (Items.RepairKit) OrderPrice += 1;
-
-            if (Items.AditionalDetails) OrderPrice += 1;
-
-            if (Items.Googles) OrderPrice += 1;
-
-            if (Items.Googles2) OrderPrice += 2;
-
-            if (Items.MedGloves) OrderPrice += 1;
-
-            if (Items.Gloves) OrderPrice += 1;
-
-            if (Items.Helmet) OrderPrice += 4;
-
-            if (Items.Gasmask) OrderPrice += 4;
-
-            if (Items.ProtectCostume) OrderPrice += 5;
-
-            if (Items.Resperator) OrderPrice += 1;
-
-            if (Items.Resperator2) OrderPrice += 2;
-
-            return RedirectToPage("/Checkout/Checkout", new { Items.ItemName, OrderPrice});
         }
-    }
+		public IActionResult OnPost()
+		{
+			OrderPrice = Orde(Items);
+
+			return RedirectToPage("/Checkout/Checkout", new { Items.ItemName, OrderPrice });
+		}
+	}
 }

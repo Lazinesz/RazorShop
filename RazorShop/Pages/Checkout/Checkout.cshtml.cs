@@ -5,7 +5,22 @@ using RazorShop.Models;
 
 namespace RazorShop.Pages.Checkout
 {
-    [BindProperties (SupportsGet =true)]
+
+	public class Info
+	{
+        public static ItemOrder SetInfo(string name, ref string image, float itemPrice)
+        {
+            if (string.IsNullOrWhiteSpace(name)) { name = "Custom"; }
+            if (string.IsNullOrWhiteSpace(image)) { image = "Create"; }
+			ItemOrder itemOrder = new ItemOrder();
+			itemOrder.ItemName = name;
+			itemOrder.BasePrise = itemPrice;
+
+			return itemOrder;
+    }
+
+		}
+		[BindProperties (SupportsGet =true)]
     public class CheckoutModel : PageModel
     {       
         public string ItemName { get; set; }
@@ -19,20 +34,11 @@ namespace RazorShop.Pages.Checkout
         }
         public void OnGet()
         {
-            if (string.IsNullOrWhiteSpace(ItemName))
-            {
-                ItemName = "Custom";
-            }
-            if (string.IsNullOrWhiteSpace(ImageTitle))
-            {
-                ImageTitle = "Create";
-            }
-
-            ItemOrder itemOrder= new ItemOrder(); 
-            itemOrder.ItemName = ItemName;
-            itemOrder.BasePrise = OrderPrice;
-
-            _context.ItemOrders.Add(itemOrder); 
+			string image = ImageTitle;
+			ItemOrder itemOrder= new ItemOrder();
+			itemOrder = Info.SetInfo(ItemName, ref image, OrderPrice);
+			ImageTitle = image;
+			_context.ItemOrders.Add(itemOrder); 
             _context.SaveChanges();
         }
     }

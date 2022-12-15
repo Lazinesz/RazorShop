@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dnT8w7GRrJ/QyrATRNGZ4gVcsB/FTujaooF2YDb+e4mUUb0fnd5zAZeEGDylb3Nlv274L2+WZxI+YyxO9o9RqQ==",
+  "dgSpecHash": "DE+F8W/DCtIxqxH/z9LjG/MJs9L2NhXmbKMygSncL2UtQJXcLtbXaynZ2kRbINiw69e4+4I+X++vVzNuIKmU0w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop.csproj",
+  "projectFilePath": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop\\RazorShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\256bit.by\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\256bit.by\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

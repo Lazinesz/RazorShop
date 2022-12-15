@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop.csproj",
+      "projectUniqueName": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop\\RazorShop.csproj",
       "projectName": "RazorShop",
-      "projectPath": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop.csproj",
+      "projectPath": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop\\RazorShop.csproj",
       "packagesPath": "C:\\Users\\256bit.by\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\obj\\",
+      "outputPath": "C:\\Users\\256bit.by\\source\\repos\\RazorShop\\RazorShop\\RazorShop\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\256bit.by\\AppData\\Roaming\\NuGet\\NuGet.Config",
